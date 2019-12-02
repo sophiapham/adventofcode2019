@@ -8,12 +8,14 @@ public class day1 {
         int sum = 0;
         File file = new File("C:\\Users\\Pixie Waffle\\Desktop\\adventofcode2019\\adventofcode2019\\day1\\day1.txt");
         Scanner sc = new Scanner(file);
-        while (sc.hasNextLine()){
-            int res = sc.nextInt();
-            int temp = Math.floorDiv(res, 3) - 2;
-            sum = sum + temp;
+        while (sc.hasNextLine()) {
+            int mass = sc.nextInt();
+            int req = Math.floorDiv(mass, 3) - 2;
+            while (req > 0){
+                sum = sum + req;
+                req = Math.floorDiv(req, 3) - 2;
+            }
         }
-
         System.out.println(sum);
     }
 
