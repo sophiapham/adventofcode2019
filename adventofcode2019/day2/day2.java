@@ -23,6 +23,6 @@ public class day2 {
             }
         }
         System.out.println("Result should be: 19690720.\nThe result is: " + inputArray[0]);
-        System.out.println("Answer: " + 100 * 57 + 41);
+        System.out.println("Answer: " + 100 * (57 + 41)); //står "100 * noun + verb" vilket är fel i adventcode.
     }
 }
