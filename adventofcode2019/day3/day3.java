@@ -8,7 +8,7 @@ import java.util.*;
 
 import static com.oracle.jrockit.jfr.DataType.U8;
 import static com.sun.javafx.fxml.expression.Expression.add;
-
+//WARNING: VERY SLOW CODE. DO NOT COMPILE IF YOUR COMPUTER HAS A WEAK HEART.
 public class day3 {
     public static void main(String[] args) {
         int currentX;
