@@ -144,15 +144,15 @@ public class day3 {
         }
 
         List<Pair<Integer, Integer>> intSec = intersection(fstPairCoordinates, sndPairCoordinates);
-        int[] distances = {0};
+        List<Integer> distances = new ArrayList<Integer>();
         for (Pair<Integer, Integer> i : intSec) {
             int x = i.getKey();
             int y = i.getValue();
             int xy = x+y;
-            distances.add(xy); //addera alla intersectionvalues i en array för att sedan jämföra minsta värde.
+            distances.add(xy);
         }
 
-        manhattanDistance = Arrays.stream(distances).min().getAsInt();
+        manhattanDistance = findMin(distances);
 
         System.out.println("Intersections: " + intSec);
         System.out.println("Manhattandistance: " + manhattanDistance);
@@ -168,6 +168,17 @@ public class day3 {
         }
 
         return list;
+    }
+
+
+    public static Integer findMin(List<Integer> list)
+    {
+        if (list == null || list.size() == 0) {
+            return Integer.MAX_VALUE;
+        }
+        List<Integer> sortedlist = new ArrayList<>(list);
+        Collections.sort(sortedlist);
+        return sortedlist.get(0);
     }
 
 }
