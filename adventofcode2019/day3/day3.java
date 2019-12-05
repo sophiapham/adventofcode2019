@@ -60,7 +60,7 @@ public class day3 {
                 }
                 int nDown = Integer.parseInt(temp);
                 for(int j = 0; j < nDown; j++){
-                    Pair<Integer, Integer> downCoordinates = new Pair<Integer, Integer>(currentX, j);
+                    Pair<Integer, Integer> downCoordinates = new Pair<Integer, Integer>(currentX, currentX+j);
                     fstPairCoordinates.add(downCoordinates);
                 }
             }
@@ -73,7 +73,7 @@ public class day3 {
                 }
                 int nUp = Integer.parseInt(temp);
                 for(int j = 0; j < nUp; j++){
-                    Pair<Integer, Integer> upCoordinates = new Pair<Integer, Integer>(currentX, -j);
+                    Pair<Integer, Integer> upCoordinates = new Pair<Integer, Integer>(currentX, currentY-j);
                     fstPairCoordinates.add(upCoordinates);
                 }
             }
@@ -98,7 +98,7 @@ public class day3 {
                 }
                 int nLeft = Integer.parseInt(temp);
                 for(int j = 0; j < nLeft; j++){
-                    Pair<Integer, Integer> leftCoordinates = new Pair<Integer, Integer>(-j, currentY);
+                    Pair<Integer, Integer> leftCoordinates = new Pair<Integer, Integer>(currentX-j, currentY);
                     sndPairCoordinates.add(leftCoordinates);
                 }
             }
@@ -111,7 +111,7 @@ public class day3 {
                 }
                 int nRight = Integer.parseInt(temp);
                 for(int j = 0; j < nRight; j++){
-                    Pair<Integer, Integer> rightCoordinates = new Pair<Integer, Integer>(j, currentY);
+                    Pair<Integer, Integer> rightCoordinates = new Pair<Integer, Integer>(currentX+j, currentY);
                     sndPairCoordinates.add(rightCoordinates);
                 }
             }
@@ -124,7 +124,7 @@ public class day3 {
                 }
                 int nDown = Integer.parseInt(temp);
                 for(int j = 0; j < nDown; j++){
-                    Pair<Integer, Integer> downCoordinates = new Pair<Integer, Integer>(currentX, j);
+                    Pair<Integer, Integer> downCoordinates = new Pair<Integer, Integer>(currentX, currentY+j);
                     sndPairCoordinates.add(downCoordinates);
                 }
             }
@@ -137,7 +137,7 @@ public class day3 {
                 }
                 int nUp = Integer.parseInt(temp);
                 for(int j = 0; j < nUp; j++){
-                    Pair<Integer, Integer> upCoordinates = new Pair<Integer, Integer>(currentX, -j);
+                    Pair<Integer, Integer> upCoordinates = new Pair<Integer, Integer>(currentX, currentY-j);
                     sndPairCoordinates.add(upCoordinates);
                 }
             }
