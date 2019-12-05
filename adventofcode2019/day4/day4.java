@@ -12,6 +12,11 @@ public class day4 {
         }
         System.out.println(amountOfSolutions);
         System.out.println(isOrdAdj(112233));
+        System.out.println(isOrdAdj(123444));
+        System.out.println(isOrdAdj(111122));
+        System.out.println(isOrdAdj(111111));
+        System.out.println(isOrdAdj(223450));
+        System.out.println(isOrdAdj(123789));
     }
 
     static  boolean isOrdAdj (int number){
