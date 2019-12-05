@@ -11,17 +11,18 @@ public class day4 {
             }
         }
         System.out.println(amountOfSolutions);
-        System.out.println(isOrdAdj(111111));
+        System.out.println(isOrdAdj(112233));
     }
 
     static  boolean isOrdAdj (int number){
         int sol = 0;
+        boolean isAdj = isAdjacent(number);
         for (int i = 0; i < 6; i++){
-            if(isAdjacent(number)){
+            if(isAdj){
                 if(number % 10 == number/10 % 10 || number % 10 > number/10 % 10){
-                sol++;
+                    sol++;
                 }
-            number = number / 10;
+                number = number / 10;
             }
         }
         if(sol == 6){
@@ -35,10 +36,15 @@ public class day4 {
     static boolean isAdjacent(int number){
         for (int i = 0; i < 6; i++){
             if(number % 10 == number/10 % 10){
-                return true;
+                if(number/10 % 10 == number/100 % 10) {
+                    return false;
+                }
+                else{
+                    return true;
+                }
             }
             number = number / 10;
         }
-    return false;
+        return false;
     }
 }
